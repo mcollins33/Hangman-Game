@@ -29,13 +29,14 @@
             </div>
             <div class="col-md-3 picture">
                 <div id="status"></div>
+                <div id="guessedWord"></div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
     $(document).ready(function() {
 
-        var animal = ["titer", "giraffe", "zebra", "lion", "monkey"];
+        var animal = ["tiger", "giraffe", "zebra", "lion", "monkey", "cougar", "turkey", "jaguar", "bear", "squirrel", "deer", "bird", "snake", "lemur", "baboon", "racoon", "kangaroo", "moose", "fox"];
 
         var word = "";
         var blanks = "";
@@ -48,6 +49,7 @@
         var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
         var random;
         var guessComplete = 0;
+        guessedWord = "";
 
 
         document.onkeyup = function(event) {
@@ -55,7 +57,8 @@
 
             //puts blanks for 1st word
             if (keypress === false) {
-                random = Math.floor(Math.random() * animal.length-1) + 1;
+                random = Math.floor(Math.random() * animal.length - 1) + 1;
+                guessedWord = animal[random];
                 for (var i = 0; i < animal[random].length; i++) {
                     blanks = blanks + "_";
                     $("#blanks").text(blanks);
@@ -70,20 +73,31 @@
 
             if (keypress === true) {
                 userGuess = event.key;
-                timesGuess--;
+
 
                 // checks to see if letter guessed is in word and pushes letter to either a correctly guessedor incorrectly guessed array
 
-                //need to prevent duplicate values in array
-                //need to alert when something other than a letter is pressed
-                //need to account for capital letters
+               
+                
+                //still need to account for capital letters
 
-                if (animal[random].indexOf(userGuess) > -1) {
-                    guessCorrect.push(userGuess);
+                //this alerts user if something other than a letter is pressed
+                if (letters.indexOf(userGuess) < 0) {
+                    alert("You must select a letter");
+                } 
+                //this checks the correctly and incorrectly guessed arrays to ensure that the user has not already selected the pressed letter.  if letter has already been selected, it will not count toward the guess.
+                else if ((guessCorrect.indexOf(userGuess) > -1) || (guessIncorrect.indexOf(userGuess) > -1)) {
+                    alert("This letter has already been selected")
                 } else {
-                    guessIncorrect.push(userGuess);
-                }
 
+                    if (animal[random].indexOf(userGuess) > -1) {
+                        guessCorrect.push(userGuess);
+                    } else {
+                        guessIncorrect.push(userGuess);
+                        timesGuess--;
+                    }
+
+                }
                 // checks to see if each letter in the current word has been guessed or not.  if the letter has not been guessed it checks to see if the user input matches.  if so, it replaces the blank with a letter, if not it keeps the blank.  if there is already a guessed letter, it keeps the guessed letter.
                 for (var i = 0; i < animal[random].length; i++) {
 
@@ -94,48 +108,42 @@
                         if (userGuess === animal[random].charAt(i)) {
                             newWord = newWord + userGuess;
                             guessComplete++;
-                            console.log(guessComplete);
                         } else {
                             newWord = newWord + "_";
                         }
-                    }}
-
-                    if (guessComplete === animal[random].length) {
-                        $("#status").text("YOU WIN");
-                        newWord = "";
-                        timesGuess = 10;
-                        guessCorrect = [];
-                        guessIncorrect = [];
-                        keypress = false;
-                        guessComplete = 0;
                     }
+                }
 
-                    else if (timesGuess < 1) {
-                        $("#status").text("YOU LOSE");
-                        newWord = "";
-                        timesGuess = 10;
-                        guessCorrect = [];
-                        guessIncorrect = [];
-                        keypress = false;
-                        guessComplete = 0;
-                    }
+                if (guessComplete === animal[random].length) {
+                    $("#status").text("YOU WIN");
+                    $("#guessedWord").text(animal[random]);
+                    newWord = "";
+                    timesGuess = 10;
+                    guessCorrect = [];
+                    guessIncorrect = [];
+                    keypress = false;
+                    guessComplete = 0;
+                } else if (timesGuess < 1) {
+                    $("#status").text("YOU LOSE");
+                    $("#guessedWord").text(animal[random]);
+                    newWord = "";
+                    timesGuess = 10;
+                    guessCorrect = [];
+                    guessIncorrect = [];
+                    keypress = false;
+                    guessComplete = 0;
+                }
 
-
-                
-
-
-                blanks = newWord;
-                newWord = "";
-                $("#blanks").text(blanks);
-                $("#timesGuess").text(timesGuess);
-                $("#guessIncorrect").text(guessIncorrect);
             }
 
 
+            blanks = newWord;
+            newWord = "";
+            $("#blanks").text(blanks);
+            $("#timesGuess").text(timesGuess);
+            $("#guessIncorrect").text(guessIncorrect);
+
         }
-
-
-
 
     })
     </script>
