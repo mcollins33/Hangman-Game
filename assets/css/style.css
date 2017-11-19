@@ -35,3 +35,9 @@ body {
 	font-size: 40px;
 	letter-spacing: 10px;
 }
+
+#status{
+	font-size:  36px;
+	color: white;
+	text-align: center;
+}
