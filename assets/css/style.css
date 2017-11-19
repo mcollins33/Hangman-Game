@@ -1,0 +1,33 @@
+body {
+	background-image: url(../images/background.png);
+}
+
+#title {
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	color: black;
+	font-family: ;
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+.hangman {
+	background-color: black;
+	height: 500px;
+	text-align: center;
+	margin: 10px;
+	color: white;
+}
+
+.picture {
+	background-color: black;
+	height: 300px;
+	margin: 10px;
+}
+
+#blanks {
+
+	text-align: center;
+
+	color: white;
+}
