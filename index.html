@@ -21,14 +21,13 @@
                     <p id="start">Press any key to start playing!</p>
                     <h1>Wins: </h1>
                     <h1>Current Word</h1>
-                    <div>
-                        <span id="blanks"></span>
+                    <div id="blanks">
                     </div>
                     <h1>Guesses Remaining: <span id="timesGuess"></span></h1>
                     <h1>Letters Guessed: <span id="guessIncorrect"></span></h1>
                 </div>
-                <div> class="col-md-3 picture" </div>
             </div>
+            <div class="col-md-3 picture"></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -45,17 +44,20 @@
         var keypress = false;
         var newWord = [];
         var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        var random;
 
 
         document.onkeyup = function(event) {
 
+
             //puts blanks for 1st word
             if (keypress === false) {
-                for (var i = 0; i < animal[0].length; i++) {
-                    blanks = blanks + "-";
+                random = Math.floor(Math.random() * animal.length) + 1;
+                console.log(random);
+                for (var i = 0; i < animal[random].length; i++) {
+                    blanks = blanks + "_";
                     $("#blanks").text(blanks);
                     $("#timesGuess").text(timesGuess);
-
                     keypress = true;
                 }
             }
@@ -69,25 +71,27 @@
                 userGuess = event.key;
                 timesGuess--;
 
+
+
                 // checks to see if letter guessed is in word and pushes letter to either a correctly guessedor incorrectly guessed array
-                if (animal[0].indexOf(userGuess) > -1) {
+                if (animal[random].indexOf(userGuess) > -1) {
                     guessCorrect.push(userGuess);
                 } else {
                     guessIncorrect.push(userGuess);
                 }
 
                 // checks to see if each letter in the current word has been guessed or not.  if the letter has not been guessed it checks to see if the user input matches.  if so, it replaced the blank with a letter, if not it keeps the blank.  if there is already a guessed letter, it keeps the guessed letter.
-                for (var i = 0; i < animal[0].length; i++) {
+                for (var i = 0; i < animal[random].length; i++) {
 
 
                     if (letters.indexOf(blanks.charAt(i)) > -1) {
                         newWord = newWord + blanks.charAt(i);
                     } else {
-                        if (userGuess === animal[0].charAt(i)) {
+                        if (userGuess === animal[random].charAt(i)) {
                             newWord = newWord + userGuess;
 
                         } else {
-                            newWord = newWord + "-";
+                            newWord = newWord + "_";
 
                         }
 
@@ -95,10 +99,8 @@
 
 
                 }
-                console.log(timesGuess);
-                console.log(newWord);
-                console.log(guessCorrect);
-                console.log(guessIncorrect);
+
+
                 blanks = newWord;
                 newWord = "";
                 $("#blanks").text(blanks);
