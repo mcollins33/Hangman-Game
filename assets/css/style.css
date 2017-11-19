@@ -25,9 +25,13 @@ body {
 	margin: 10px;
 }
 
-#blanks {
-
-	text-align: center;
-
+#game {
+	font-size:  36px;
 	color: white;
+	text-align: center;
+}
+
+#blanks{
+	font-size: 40px;
+	letter-spacing: 10px;
 }
