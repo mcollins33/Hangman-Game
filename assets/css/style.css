@@ -1,43 +1,88 @@
 body {
-	background-image: url(../images/background.png);
+    background-image: url(../images/background.png);
 }
 
 #title {
-	font-weight: bold;
-	text-align: center;
-	width: 100%;
-	color: black;
-	font-family: ;
-	font-size: 70px;
-	margin-bottom: 20px;
-}
-.hangman {
-	background-color: black;
-	height: 500px;
-	text-align: center;
-	margin: 10px;
-	color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-family: 'Shojumaru', cursive, Arial, serif;
+    font-size: 110px;
+    margin-bottom: 20px;
 }
 
-.picture {
-	background-color: black;
-	height: 300px;
-	margin: 10px;
+.hangman {
+    background-color: black;
+    height: 500px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    border-style: groove;
+    border-color: green;
+    border-width: 15px;
+}
+
+#pictureHolder {
+    background-color: black;
+    height: 325px;
+    margin: 10px;
+    border-style: groove;
+    border-color: green;
+    border-width: 15px;
+    width: 100%;
+
+}
+
+#picture {
+    width: 100%
+
+}
+
+.status {
+    background-color: black;
+    height: 165px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    border-style: groove;
+    border-color: green;
+    border-width: 15px;
+    width: 100%;
+
+}
+
+#start {
+    padding-top: 25px;
 }
 
 #game {
-	font-size:  36px;
-	color: white;
-	text-align: center;
+    font-size: 36px;
+    color: white;
+    text-align: center;
 }
 
-#blanks{
-	font-size: 40px;
-	letter-spacing: 10px;
+#blanks {
+    font-size: 40px;
+    letter-spacing: 10px;
 }
 
-#status, #guessedWord {
-	font-size:  36px;
-	color: white;
+#status {
+	padding-top: 15px;
+	font-family: 'Shojumaru', cursive, Arial, serif;
+    font-size: 40px;
+    color: green;
+    text-align: center;
+}
+
+#guessedWord {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+img {
+	max-width: 300px;
+	max-height: 300px;
 	text-align: center;
 }
