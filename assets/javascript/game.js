@@ -86,8 +86,6 @@
                     }
                 }
 
-                //pictures need to be centered
-
                 //this keeps track of wins and resets variables to start new game
                 if (guessComplete === animal[random].name.length) {
                     $("#status").text("YOU WIN");
