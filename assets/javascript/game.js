@@ -2,7 +2,7 @@
  $(document).ready(function() {
 
 
-        var animal = [tiger, giraffe, zebra, lion, monkey, turkey, jaguar, bear, squirrel, deer, bird, snake, raccoon, kangaroo, moose, fox, leopard, owl, elephant, rabbit];
+        var animal = [tiger, giraffe, zebra, lion, monkey, turkey, jaguar, bear, squirrel, deer, bird, snake, raccoon, kangaroo, moose, fox, leopard, owl, elephant, rabbit, turtle, peacock];
 
 
         var word = "";
@@ -25,7 +25,7 @@
 
             //puts blanks for 1st word
             if (keypress === false) {
-                random = Math.floor(Math.random() * (animal.length - 1));
+                random = Math.floor(Math.random() * (animal.length));
                 guessedWord = animal[random].name;
 
                 for (var i = 0; i < animal[random].name.length; i++) {
@@ -149,12 +149,12 @@ lion = {
 
 monkey = {
 	name: "monkey",
-	pic: "<img src='./assets/images/monkey.jpg' />",
+	pic: "<img src='./assets/images/monkey.png' />",
 },
 
 turkey = {
 	name: "turkey",
-	pic: "<img src='./assets/images/turkey.jpg' />",
+	pic: "<img src='./assets/images/turkey.png' />",
 },
 
 jaguar = {
@@ -164,12 +164,12 @@ jaguar = {
 
 bear = {
 	name: "bear",
-	pic: "<img src='./assets/images/bear.jpg' />",
+	pic: "<img src='./assets/images/bear.png' />",
 },
 
 squirrel = {
 	name: "squirrel",
-	pic: "<img src='./assets/images/squirrel.jpg' />",
+	pic: "<img src='./assets/images/squirrel.png' />",
 },
 
 deer = {
@@ -189,7 +189,7 @@ snake = {
 
 raccoon = {
 	name: "racoon",
-	pic: "<img src='./assets/images/raccoon.gif' />",
+	pic: "<img src='./assets/images/raccoon.png' />",
 },
 
 kangaroo = {
@@ -214,15 +214,26 @@ leopard = {
 
 owl = {
 	name: "owl",
-	pic: "<img src='./assets/images/owl.jpg' />",
+	pic: "<img src='./assets/images/owl.png' />",
 },
 
 elephant = {
 	name: "elephant",
-	pic: "<img src='./assets/images/elephant.jpg' />",
+	pic: "<img src='./assets/images/elephant.png' />",
 },
 
 rabbit = {
 	name: "rabbit",
 	pic: "<img src='./assets/images/rabbit.gif' />",
 }
+
+turtle = {
+    name: "turtle",
+    pic: "<img src='./assets/images/turtle.png' />",
+}
+
+peacock = {
+    name: "peacock",
+    pic: "<img src='./assets/images/peacock.png' />",
+}
+
