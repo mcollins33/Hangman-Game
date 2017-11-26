@@ -128,103 +128,103 @@
 
 
 tiger = {
-	name: "tiger",
-	pic: "<img src='./assets/images/tiger.png' />",
+    name: "tiger",
+    pic: "<img src='./assets/images/tiger.png' />",
 },
 
 giraffe = {
-	name: "giraffe",
-	pic: "<img src='./assets/images/giraffe.png' />",
+    name: "giraffe",
+    pic: "<img src='./assets/images/giraffe.png' />",
 },
 
 zebra = {
-	name: "zebra",
-	pic: "<img src='./assets/images/zebra.png' />",
+    name: "zebra",
+    pic: "<img src='./assets/images/zebra.png' />",
 },
 
 lion = {
-	name: "lion",
-	pic: "<img src='./assets/images/lion.png' />",
+    name: "lion",
+    pic: "<img src='./assets/images/lion.png' />",
 },
 
 monkey = {
-	name: "monkey",
-	pic: "<img src='./assets/images/monkey.png' />",
+    name: "monkey",
+    pic: "<img src='./assets/images/monkey.png' />",
 },
 
 turkey = {
-	name: "turkey",
-	pic: "<img src='./assets/images/turkey.png' />",
+    name: "turkey",
+    pic: "<img src='./assets/images/turkey.png' />",
 },
 
 jaguar = {
-	name: "jaguar",
-	pic: "<img src='./assets/images/jaguar.gif' />",
+    name: "jaguar",
+    pic: "<img src='./assets/images/jaguar.gif' />",
 },
 
 bear = {
-	name: "bear",
-	pic: "<img src='./assets/images/bear.png' />",
+    name: "bear",
+    pic: "<img src='./assets/images/bear.png' />",
 },
 
 squirrel = {
-	name: "squirrel",
-	pic: "<img src='./assets/images/squirrel.png' />",
+    name: "squirrel",
+    pic: "<img src='./assets/images/squirrel.png' />",
 },
 
 deer = {
-	name: "deer",
-	pic: "<img src='./assets/images/deer.png' />",
+    name: "deer",
+    pic: "<img src='./assets/images/deer.png' />",
 },
 
 bird = {
-	name: "bird",
-	pic: "<img src='./assets/images/bird.png' />",
+    name: "bird",
+    pic: "<img src='./assets/images/bird.png' />",
 },
 
 snake = {
-	name: "snake",
-	pic: "<img src='./assets/images/snake.gif' />",
+    name: "snake",
+    pic: "<img src='./assets/images/snake.gif' />",
 },
 
 raccoon = {
-	name: "racoon",
-	pic: "<img src='./assets/images/raccoon.png' />",
+    name: "racoon",
+    pic: "<img src='./assets/images/raccoon.png' />",
 },
 
 kangaroo = {
-	name: "kangaroo",
-	pic: "<img src='./assets/images/kangaroo.png' />",
+    name: "kangaroo",
+    pic: "<img src='./assets/images/kangaroo.png' />",
 },
 
 moose = {
-	name: "moose",
-	pic: "<img src='./assets/images/moose.png' />",
+    name: "moose",
+    pic: "<img src='./assets/images/moose.png' />",
 },
 
 fox = {
-	name: "fox",
-	pic: "<img src='./assets/images/fox.png' />",
+    name: "fox",
+    pic: "<img src='./assets/images/fox.png' />",
 },
 
 leopard = {
-	name: "leopard",
-	pic: "<img src='./assets/images/leopard.png' />",
+    name: "leopard",
+    pic: "<img src='./assets/images/leopard.png' />",
 },
 
 owl = {
-	name: "owl",
-	pic: "<img src='./assets/images/owl.png' />",
+    name: "owl",
+    pic: "<img src='./assets/images/owl.png' />",
 },
 
 elephant = {
-	name: "elephant",
-	pic: "<img src='./assets/images/elephant.png' />",
+    name: "elephant",
+    pic: "<img src='./assets/images/elephant.png' />",
 },
 
 rabbit = {
-	name: "rabbit",
-	pic: "<img src='./assets/images/rabbit.gif' />",
+    name: "rabbit",
+    pic: "<img src='./assets/images/rabbit.gif' />",
 }
 
 turtle = {
